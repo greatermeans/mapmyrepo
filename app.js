@@ -1,3 +1,11 @@
+const store = {
+  user: [],
+  repo: [],
+  map: {},
+  markers: []
+}
 
-$('document').on('ready')
-  mapsController()
+
+//
+// $('document').on('ready')
+//   mapsController()
