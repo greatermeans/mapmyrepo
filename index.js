@@ -16,11 +16,6 @@ function displayRepositories(repos) {
 	var template = Handlebars.compile(string);
 	var repoList = template(repos)
 	$('#repositories').html(repoList)
-	// const repoList = `<ul>${repos.map(r => '<li>' + r.name.split('-').join(' ') + ` <a href="${r.html_url}" target="_blank"` + '>' +
-	// 	'Origin</a>' + ' || ' + `<a href="#" repo-owner='${r.owner.login}' data-repo='${r.name}'
-	// 	onclick="getCommits(this)">Commits</a>` + ' || ' + `<a href="#" repo-owner='${r.owner.login}' data-repo='${r.name}'
-	// 	onclick="getBranches(this)">Branches</a>` + '</li>').join('')}</ul>`
-	// document.getElementById('repositories').innerHTML = repoList
 }
 
 function getCommits(el) {

@@ -1,6 +1,7 @@
 const store = {
   user: [],
-  repo: []
+  repo: [],
+  contributors: []
 }
 
 $(document).on('ready', function(){
