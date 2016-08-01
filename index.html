@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript GitHub API with AJAX</title>
+    <style>
+       .flexbox-container {
+         display: -ms-flex;
+         display: -webkit-flex;
+         display: flex;
+       }
+
+      .flexbox-container > div {
+        width: 50%;
+        padding: 10px;
+      }
+
+      .flexbox-container > div:first-child {
+        margin-right: 20px;
+      }
+    </style>
+    </head>
+    <body>
+    <main id="main">
+    <br>
+    <br>
+    <form id="query" onsubmit="getRepositories()">
+      <label for="search"> Search Username: <input type="text" id="username" name="username" placeholder="Git Username goes here"></label>
+      <input type="submit" value="Search">
+    </form>
+    </main>
+
+    <div class="flexbox-container">
+      <div>
+        <h3>Repositories</h3>
+        <div id="repositories"></div>
+      </div>
+      <div>
+        <h3>Details</h3>
+        <div id="details"></div>
+      </div>
+    </div>
+
+    <script src="jquery-1.11.3.js"></script>
+    <script src="lib/handlebars.js"></script>
+    <script src="index.js"></script>
+    <script id="repositories-template" type="text/x-handlebars-template">
+    </div>
+    {{#each this}}
+      <div class="row">
+        <a href="{{html_url}}">{{name}}</a>
+      </div>
+    {{/each}}
+    </div>
+    </script>
+  </body>
+</html>
