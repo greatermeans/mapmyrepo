@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JavaScript GitHub API with AJAX</title>
+    <title>Map My Repo</title>
     <style>
        .flexbox-container {
          display: -ms-flex;
@@ -49,9 +49,11 @@
     <script src="lib/handlebars.js"></script>
     <script src="app/models/repo.js"> </script>
     <script src="app/models/user.js"> </script>
+    <script src="app/models/map.js"> </script>
     <script src="app/controllers/usersController.js"> </script>
     <script src="app/controllers/reposController.js"> </script>
     <script src="index.js"></script>
+
     <script id="repositories-template" type="text/x-handlebars-template">
     </div>
     {{#each this}}
@@ -61,6 +63,7 @@
     {{/each}}
     </div>
     </script>
+    
     <script>
       // function initMap() {
       //   var mapDiv = document.getElementById('map');

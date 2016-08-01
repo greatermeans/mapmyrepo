@@ -4,13 +4,23 @@ function usersController(event){
 	const username = $('#username').val()
 	document.getElementById('query').reset()
 	$.ajax({
-        url: `https://api.github.com/users/${username}/repos`,
-        type: 'get'
+      url: `https://api.github.com/users/${username}`,
+      type: 'get'
     })
     .done(function (response) {
-      var user = new User(username)
+      var user = new User(response.login, response.location)
+      getRepositories(response.login)
+    })
+
+  function getRepositories(username) {
+    $.ajax({
+      url: `https://api.github.com/users/${username}/repos`,
+      type: 'get'
+    })
+    .done(function (response) {
       displayRepositories(response)
     })
+  }
 
   function displayRepositories(repos) {
   	var string = $("#repositories-template").html();
