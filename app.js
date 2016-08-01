@@ -10,8 +10,3 @@ const store = {
   maps: [],
   markers: []
 }
-
-
-//
-// $('document').on('ready')
-//   mapsController()
