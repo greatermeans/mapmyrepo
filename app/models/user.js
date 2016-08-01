@@ -1,15 +1,3 @@
-const store = {
-  users: [],
-  repos: [],
-  contributors: []
-}
-
-// $(document).on('ready', function(){
-//   $('form#query').on('submit', function(event){
-//     usersController(event);
-//   });
-// })
-
 const User = (function(){
   var counter = 0
 
