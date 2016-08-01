@@ -28,7 +28,7 @@
     <main id="main">
     <br>
     <br>
-    <form id="query" onsubmit="getRepositories()">
+    <form id="query">
       <label for="search"> Search Username: <input type="text" id="username" name="username" placeholder="Git Username goes here"></label>
       <input type="submit" value="Search">
     </form>
@@ -47,6 +47,10 @@
     <div id="map"></div>
     <script src="jquery-1.11.3.js"></script>
     <script src="lib/handlebars.js"></script>
+    <script src="app/models/repo.js"> </script>
+    <script src="app/models/user.js"> </script>
+    <script src="app/controllers/usersController.js"> </script>
+    <script src="app/controllers/reposController.js"> </script>
     <script src="index.js"></script>
     <script id="repositories-template" type="text/x-handlebars-template">
     </div>

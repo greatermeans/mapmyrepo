@@ -1,10 +1,10 @@
 const store = {
-  user: []
+  user: [],
   repo: []
 }
 
 $(document).on('ready', function(){
-  $('form').on('submit', function(event){
+  $('form#query').on('submit', function(event){
     usersController(event);
   });
 })

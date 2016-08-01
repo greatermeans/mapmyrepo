@@ -8,7 +8,15 @@ function usersController(event){
         type: 'get'
     })
     .done(function (response) {
-      var user = new User(username, location)
-
-        displayRepositories(response)
+      var user = new User(username)
+      displayRepositories(response)
     })
+
+  function displayRepositories(repos) {
+  	var string = $("#repositories-template").html();
+  	var template = Handlebars.compile(string);
+  	var repoList = template(repos)
+  	$('#repositories').html(repoList)
+  }
+
+}
