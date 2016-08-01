@@ -14,14 +14,12 @@ const User = (function(){
 
   return class {
 
-    constructor(username){
+    constructor(username, location){
       this.username = username;
-      this.location = '';
+      this.location = location;
       this.id = counter++
       store.user.push(this);
     }
-    classrooms(){
-      // filter
-    }
+
   }
 }())
