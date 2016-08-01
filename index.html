@@ -17,6 +17,11 @@
       .flexbox-container > div:first-child {
         margin-right: 20px;
       }
+
+      #map {
+        width: 100%;
+        height: 400px;
+      }
     </style>
     </head>
     <body>
@@ -39,7 +44,7 @@
         <div id="details"></div>
       </div>
     </div>
-
+    <div id="map"></div>
     <script src="jquery-1.11.3.js"></script>
     <script src="lib/handlebars.js"></script>
     <script src="index.js"></script>
@@ -52,5 +57,37 @@
     {{/each}}
     </div>
     </script>
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {"lat" : 34.0522342, "lng" : -118.2436849},
+            zoom: 8
+        });
+
+
+
+
+
+        var marker = new google.maps.Marker({
+          position: {"lat" : 34.0522342, "lng" : -118.2436849},
+          map: map,
+          title: 'Hello World!'
+        });
+
+        var marker2 = new google.maps.Marker({
+          position: {lat: 35.540, lng: -68.546},
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi1C-M1xTJE97lk16r_qyINyd1jPii9W4&callback=initMap">
+    </script>
+    <script>
+        src="https://maps.googleapis.com/maps/api/geocode/json?address=Los%20Angeles&key=AIzaSyCi1C-M1xTJE97lk16r_qyINyd1jPii9W4"
+    </script>
+
   </body>
 </html>
