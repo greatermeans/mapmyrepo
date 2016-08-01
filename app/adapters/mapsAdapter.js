@@ -9,7 +9,7 @@ function mapsAdapter(){
           center: {"lat" : 34.0522342, "lng" : -118.2436849},
           zoom: 8
       });
-
+    
 
   })
 }
