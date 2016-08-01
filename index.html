@@ -28,7 +28,7 @@
     <main id="main">
     <br>
     <br>
-    <form id="query">
+    <form id="query" onsubmit="initiate(event)">
       <label for="search"> Search Username: <input type="text" id="username" name="username" placeholder="Git Username goes here"></label>
       <input type="submit" value="Search">
     </form>
@@ -50,10 +50,13 @@
     <script src="app/models/repo.js"> </script>
     <script src="app/models/user.js"> </script>
     <script src="app/models/map.js"> </script>
+    <script src="app/adapters/mapsAdapter.js"> </script>
+    <script src="app/adapters/reposAdapter.js"> </script>
+    <script src="app/adapters/usersAdapter.js"> </script>
     <script src="app/controllers/usersController.js"> </script>
     <script src="app/controllers/reposController.js"> </script>
     <script src="app/controllers/mapsController.js"> </script>
-    <script src="index.js"></script>
+    <script src="app.js"></script>
 
     <script id="repositories-template" type="text/x-handlebars-template">
     </div>

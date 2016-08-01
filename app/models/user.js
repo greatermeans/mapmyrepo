@@ -1,14 +1,14 @@
 const store = {
-  user: [],
-  repo: [],
+  users: [],
+  repos: [],
   contributors: []
 }
 
-$(document).on('ready', function(){
-  $('form#query').on('submit', function(event){
-    usersController(event);
-  });
-})
+// $(document).on('ready', function(){
+//   $('form#query').on('submit', function(event){
+//     usersController(event);
+//   });
+// })
 
 const User = (function(){
   var counter = 0
@@ -19,7 +19,7 @@ const User = (function(){
       this.username = username;
       this.location = location;
       this.id = counter++
-      store.user.push(this);
+      store.users.push(this);
     }
 
   }
