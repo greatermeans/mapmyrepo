@@ -3,3 +3,15 @@ function initiate(event) {
   usersController.getOwner()
   usersController.getRepos()
 }
+
+const store = {
+  user: [],
+  repo: [],
+  map: {},
+  markers: []
+}
+
+
+//
+// $('document').on('ready')
+//   mapsController()

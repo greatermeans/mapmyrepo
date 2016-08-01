@@ -1,10 +1,10 @@
 const Mark = (function() {
     return class {
-      constructor(position, map, title) {
-      	  this.position = position
-	      this.map = map
+      constructor(position, title) {
+      	this.position = position
 	      this.title = title
-	      map.markers.push(this)
+
+        // map.markers.push(this)
       }
     }
 }())
