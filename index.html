@@ -19,7 +19,7 @@
       }
 
       #map {
-        width: 100%;
+        width: 80%;
         height: 400px;
       }
     </style>
@@ -57,7 +57,13 @@
     <script src="app/controllers/reposController.js"> </script>
     <script src="app/controllers/mapsController.js"> </script>
     <script src="app.js"></script>
-
+    <script src="index.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi1C-M1xTJE97lk16r_qyINyd1jPii9W4">
+    </script>
+    <script src="app/models/theMap.js"></script>
+    <script src="app/models/mark.js"></script>
+    <script src="app/controllers/mapsController.js"></script>
     <script id="repositories-template" type="text/x-handlebars-template">
     </div>
     {{#each this}}
@@ -93,11 +99,9 @@
         // });
 
     </script> -->
+
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi1C-M1xTJE97lk16r_qyINyd1jPii9W4&callback">
-    </script>
-    <script>
-        src="https://maps.googleapis.com/maps/api/geocode/json?address=Los%20Angeles&key=AIzaSyCi1C-M1xTJE97lk16r_qyINyd1jPii9W4"
+        src="https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCi1C-M1xTJE97lk16r_qyINyd1jPii9W4" >
     </script>
 
   </body>
