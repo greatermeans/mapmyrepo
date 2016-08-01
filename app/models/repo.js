@@ -4,11 +4,11 @@ const Repo = (function(){
   return class {
 
     constructor(name, url, contributors){
-      this.name = username;
+      this.name = name;
       this.url = url;
       this.contributors = contributors;
       this.id = counter++
-      store.repo.push(this);
+      store.repos.push(this);
     }
 
   }

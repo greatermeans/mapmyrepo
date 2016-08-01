@@ -5,18 +5,22 @@ var usersController = (function() {
   }
 
   function getOwner() {
-    const user = $('#username').val()
-    document.getElementById('query').reset()
-    debugger
+    let user = $('#username').val()
     usersAdapter(user)
   }
 
   function getRepos() {
-    debugger
-    reposAdapter(store.users[0].username)
+    let user = $('#username').val()
+    $('#query')[0].reset()
+    return repoArr = reposAdapter(user)
   }
 
-  // getRepositories(store.users[store.users.length - 1].username)
+  // function createRepos(repoArr) {
+  //   repoArr.forEach(function (r) {
+  //     debugger
+  //     new Repo (r.name,r.html_url,r.contributors_url)
+  //   })
+  // }
 
   // function getRepositories(username) {
   //   $.ajax({
