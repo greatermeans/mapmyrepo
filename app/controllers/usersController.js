@@ -1,5 +1,14 @@
 function usersController(event){
 
-  event.preventDefault();
-  let username = $( "#username" ).val()
-  var user = new User(name, hometown)  
+  event.preventDefault()
+	const username = $('#username').val()
+	document.getElementById('query').reset()
+	$.ajax({
+        url: `https://api.github.com/users/${username}/repos`,
+        type: 'get'
+    })
+    .done(function (response) {
+      var user = new User(username, location)
+
+        displayRepositories(response)
+    })
