@@ -1,12 +1,3 @@
-
-const store = {
-  user: [],
-  repo: [],
-  map: {},
-  markers: []
-}
-
-
 var mapsController = (function () {
 	var theMap
 
@@ -14,7 +5,7 @@ var mapsController = (function () {
 
 		var markerArr = [{"lat" : 34.0522342, "lng" : -80.2436849},{"lat" : 80.0522342, "lng" : -118.2436849}]
 		var MapProperties = new Mapped ({"lat" : 34.0522342, "lng" : -118.2436849},8, markerArr)
-		markerArr.forEach(createMarker
+		markerArr.forEach(createMarker)
 		show()
 
 		theMap.markers.forEach(setMarker)

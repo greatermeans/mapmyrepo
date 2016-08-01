@@ -4,7 +4,6 @@ const Mapped = (function() {
       this.center = center
       this.markers = markers
       this.zoom = zoom
-      
       }
     }
   }());

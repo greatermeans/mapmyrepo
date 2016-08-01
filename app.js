@@ -5,9 +5,9 @@ function initiate(event) {
 }
 
 const store = {
-  user: [],
-  repo: [],
-  map: {},
+  users: [],
+  repos: [],
+  maps: [],
   markers: []
 }
 
