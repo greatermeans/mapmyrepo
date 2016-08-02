@@ -40,19 +40,10 @@ function mapLocations() {
 	mapsController.create()
 	mapsController.show()
 	store.users.forEach(function(user) {
-
       geocoderAdapter(user)
-
-      // mark.user = user
 	})
-  setTimeout(assignMarkToUser, 2000)
+  // setTimeout(assignMarkToUser, 2000)
 	setTimeout(mapsController.setAllMarkers, 2000)
 
 
-}
-
-function assignMarkToUser() {
-  store.marks.forEach(function(elem, i){
-elem.user = store.users[i]
-})
 }

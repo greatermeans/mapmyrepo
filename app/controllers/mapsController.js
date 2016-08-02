@@ -15,9 +15,10 @@ var mapsController = (function () {
 			 };
 
 	 var infowindow = new google.maps.InfoWindow({
-	    content: `</p>${mark.user.username}</p>
-								<img src=${mark.user.avatar} height="50" width="50">
-								<a href=${mark.user.url} target="_blank">Profile</a>`
+	    content: `<h3>${mark.user.username}</h3>
+								<a href=${mark.user.url} target="_blank">
+									<img src=${mark.user.avatar} height="40" width="40">
+								</a>`
 	  });
 
 		var marker = new google.maps.Marker({
@@ -28,13 +29,9 @@ var mapsController = (function () {
 
 				marker.addListener('click', function(){
 					infowindow.open(store.map, marker)
-					// window.location.href = mark.user.url
 				})
 
 			}
-					// title: mark.title
-
-
 
 	function setAllMarkers() {
 		store.marks.forEach(setMarker)
