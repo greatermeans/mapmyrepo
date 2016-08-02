@@ -25,8 +25,6 @@ var mapsController = (function () {
 
           // title: mark.title
 
-					icon: 'logo-github.svg'
-
         });
 	}
 

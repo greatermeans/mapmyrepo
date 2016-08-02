@@ -16,13 +16,13 @@ var repo
 var user
 
 function gatherContributors(event,self) {
-	event.preventDefault()
+  event.preventDefault()
 	store.users = []
 	store.marks = []
 	repo = (store.repos.filter(function (r) {
 		return (parseInt(self.id)) === r.id
 	}))[0]
-
+  debugger
 	contributors = contributorsAdapter(repo)
 	setTimeout(convertContributors, 150)
 	setTimeout(mapLocations, 1000)
