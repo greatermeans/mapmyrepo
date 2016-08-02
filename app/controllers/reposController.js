@@ -1,24 +1,16 @@
-function reposController(event){
-  event.preventDefault();
+var reposController = (function () {
 
 
-  function displayRepositories(repos) {
+  function displayRepositories() {
   	var string = $("#repositories-template").html();
   	var template = Handlebars.compile(string);
-  	var repoList = template(repos)
+  	var repoList = template(store.repos)
   	$('#repositories').html(repoList)
   }
 
+  return {
+  	displayRepositories
+  }
 
-}
 
-
-// function getRepositories(username) {
-//   $.ajax({
-//     url: `https://api.github.com/users/${username}/repos`,
-//     type: 'get'
-//   })
-//   .done(function (response) {
-//     displayRepositories(response)
-//   })
-// }
+}())

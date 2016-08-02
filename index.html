@@ -40,11 +40,10 @@
         <div id="repositories"></div>
       </div>
       <div>
-        <h3>Details</h3>
-        <div id="details"></div>
+        <h3>Map</h3>
+        <div id="map"></div>
       </div>
     </div>
-    <div id="map"></div>
     <script src="jquery-1.11.3.js"></script>
     <script src="lib/handlebars.js"></script>
     <script src="app/models/repo.js"> </script>
@@ -52,6 +51,7 @@
     <script src="app/models/mapped.js"> </script>
     <script src="app/models/user.js"> </script>
     <script src="app/adapters/geocoderAdapter.js"> </script>
+    <script src="app/adapters/contributorsAdapter.js"> </script>
     <script src="app/adapters/mapsAdapter.js"> </script>
     <script src="app/adapters/reposAdapter.js"> </script>
     <script src="app/adapters/usersAdapter.js"> </script>
@@ -69,7 +69,7 @@
     </div>
     {{#each this}}
       <div class="row">
-        <a href="{{html_url}}">{{name}}</a>
+        <a href="#" id={{id}} onclick="gatherContributors(event,this)">{{name}}</a>
       </div>
     {{/each}}
     </div>

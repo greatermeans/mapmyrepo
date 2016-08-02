@@ -7,6 +7,7 @@ function reposAdapter(user) {
     response.forEach(function (r) {
       	new Repo (r.name,r.html_url,r.contributors_url)
       })
+    reposController.displayRepositories()
   })
 }
 

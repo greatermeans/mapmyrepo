@@ -6,7 +6,7 @@ const User = (function(){
     constructor(username, location){
       this.username = username;
       this.location = location;
-      this.id = counter++
+      this.id = ++counter
       store.users.push(this);
     }
 

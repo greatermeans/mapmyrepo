@@ -3,13 +3,19 @@ const Repo = (function(){
 
   return class {
 
-    constructor(name, url, contributors){
+    constructor(name, url, contributors_url){
       this.name = name;
       this.url = url;
-      this.contributors = contributors;
-      this.id = counter++
-      store.repos.push(this);
+      this.contributors_url = contributors_url
+      this.contributors = []
+      this.id = ++counter
+      store.repos.push(this)
+      // contributorsAdapter(contributors_url)
     }
+
+
+
+
 
   }
 }())
