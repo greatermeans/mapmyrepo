@@ -11,22 +11,13 @@ var mapsController = (function () {
 
 	function setMarker(mark) {
 		var octoCat = {
-				//  url: 'https://developers.google.com/site-assets/logo-github.svg',
 				 url: 'https://cdn0.iconfinder.com/data/icons/social-media-logos-pins-free/32/social_media_logo_github-64.png'
-				//  size: new google.maps.Size(40, 50),
 			 };
 
 		new google.maps.Marker({
-					position: mark.position,
-          map: store.map,
-
-					icon: octoCat,
-
-
-          // title: mark.title
-
-					icon: 'logo-github.svg'
-
+			position: mark.position,
+  			map: store.map,
+			icon: octoCat
         });
 	}
 

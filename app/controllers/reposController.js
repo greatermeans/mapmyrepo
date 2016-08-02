@@ -5,6 +5,7 @@ var reposController = (function () {
   	var string = $("#repositories-template").html();
   	var template = Handlebars.compile(string);
   	var repoList = template(store.repos)
+  	$('#repositories').empty()
   	$('#repositories').html(repoList)
   }
 

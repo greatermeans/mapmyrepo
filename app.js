@@ -17,7 +17,6 @@ var user
 
 function gatherContributors(event,self) {
 	event.preventDefault()
-	store.users = []
 	store.marks = []
 	repo = (store.repos.filter(function (r) {
 		return (parseInt(self.id)) === r.id
