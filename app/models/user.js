@@ -3,11 +3,12 @@ const User = (function(){
 
   return class {
 
-    constructor(username, location, url){
+    constructor(username, location, url, avatar){
       this.username = username;
       this.location = location;
       this.id = ++counter
       this.url = url
+      this.avatar = avatar
       store.users.push(this);
     }
 
