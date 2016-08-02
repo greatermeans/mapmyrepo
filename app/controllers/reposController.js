@@ -13,6 +13,8 @@ var reposController = (function () {
   	$('#repositories1').html(repoList1)
     $('#repositories2').html(repoList2)
     $('#repositories3').html(repoList3)
+    $('#map').empty()
+    $('#map')[0].style.cssText = ""
   }
 
   return {
