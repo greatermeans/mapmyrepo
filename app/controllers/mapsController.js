@@ -28,8 +28,8 @@ var mapsController = (function () {
 		new google.maps.Marker({
 					position: mark.position,
           map: store.map,
-					// icon: octoCat
-          // title: this.title
+					icon: 'logo-github.svg'
+          // title: mark.title
         });
 	}
 
