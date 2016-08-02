@@ -55,3 +55,7 @@ body {
 .well-lg {
   background: rgba(100, 0, 0, 0.1);
 }
+
+#repo-title {
+  text-align: center;
+}
