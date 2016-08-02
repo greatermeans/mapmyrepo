@@ -1,6 +1,8 @@
 var usersController = (function() {
 
   function setup(event) {
+    store.repos = []
+    store.users = []
     event.preventDefault()
   }
 

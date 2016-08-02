@@ -35,14 +35,20 @@
   	</div>
 
     <div class="container">
-      <div class="row text-center white">
-        <div class="col-md-4">
-          <div class="well-lg">
-            <p>Repositories</p>
-          </div>
-          <div id="repositories"></div>
+      <div class="row">
+        <div class="col-md-6">
+            <div id="repositories1"></div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-6">
+            <div id="repositories2"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div id="map-title" class="col-md-8">
           <h2>Map</h2>
           <div id="map"></div>
         </div>
@@ -64,15 +70,16 @@
     <script src="app/controllers/reposController.js"> </script>
     <script src="app/controllers/mapsController.js"> </script>
     <script src="app.js"></script>
-
-
     <script id="repositories-template" type="text/x-handlebars-template">
-    {{#each this}}
-        <a href="#" id={{id}} onclick="gatherContributors(event,this)">{{name}}</a><br/>
-    {{/each}}
+      <div class="well-lg">
+        <p>Repositories</p>
+        {{#each this}}
+            <a href="#" id={{id}} onclick="gatherContributors(event,this)">{{name}}</a><br/>
+        {{/each}}
+      </div>
     </script>
 
-    <!-- link to attribution https://creativecommons.org/licenses/by/3.0/ -->
+    <!-- link to attribution https://creativecommons.org/licenses/by/3.0/
 
   </body>
 </html>

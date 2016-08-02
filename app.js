@@ -18,11 +18,12 @@ var user
 function gatherContributors(event,self) {
   event.preventDefault()
 	store.users = []
+	event.preventDefault()
 	store.marks = []
 	repo = (store.repos.filter(function (r) {
 		return (parseInt(self.id)) === r.id
 	}))[0]
-  debugger
+  $('#map-title').prepend(`<h1> ${repo.name} </h1>`)
 	contributors = contributorsAdapter(repo)
 	setTimeout(convertContributors, 150)
 	setTimeout(mapLocations, 1000)
