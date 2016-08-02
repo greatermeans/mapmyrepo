@@ -6,8 +6,8 @@ function geocoderAdapter(user){
   }).done(function(response){
     var pos = response.results[0].geometry.location
     var address = response.results[0].address_components[0].long_name
-    return new Mark(pos, address)
-
+    new Mark(pos, address)
+    debugger
     }
   )
 }

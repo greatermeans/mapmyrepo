@@ -46,7 +46,6 @@ function mapLocations() {
       // mark.user = user
 	})
   setTimeout(assignMarkToUser, 2000)
-  debugger
 	setTimeout(mapsController.setAllMarkers, 2000)
 
 
