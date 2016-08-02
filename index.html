@@ -35,6 +35,18 @@
   	</div>
 
     <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+            <div id="repositories1"></div>
+        </div>
+        <div class="col-md-6">
+            <div id="repositories2"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="container">
       <div class="row text-center white">
         <div class="col-md-4">
           <div class="well-lg">
@@ -47,7 +59,7 @@
           <div id="map"></div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <script src="jquery-1.11.3.js"></script>
     <script src="lib/handlebars.js"></script>
@@ -69,9 +81,12 @@
     </script>
 
     <script id="repositories-template" type="text/x-handlebars-template">
-    {{#each this}}
-        <a href="#" id={{id}} onclick="gatherContributors(event,this)">{{name}}</a><br/>
-    {{/each}}
+      <div class="well-lg">
+        <p>Repositories</p>
+        {{#each this}}
+            <a href="#" id={{id}} onclick="gatherContributors(event,this)">{{name}}</a><br/>
+        {{/each}}
+      </div>
     </script>
 
     <!-- link to attribution https://creativecommons.org/licenses/by/3.0/ -->
