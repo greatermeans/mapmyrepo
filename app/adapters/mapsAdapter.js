@@ -9,7 +9,7 @@ function mapsAdapter(){
     var makemap = (function initMap() {
       var mapDiv = document.getElementById('map');
       var map = new google.maps.Map(mapDiv, {
-          center: {"lat" : 35.476325, "lng" : -7.631913},
+          center: {"lat" : 20.272384, "lng" : 23.298962},
           zoom: 2
 
       }
