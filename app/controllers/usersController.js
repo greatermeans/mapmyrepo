@@ -3,6 +3,8 @@ var usersController = (function() {
   function setup(event) {
     store.repos = []
     store.users = []
+    $('#repo-title').empty()
+    $('.gm-style').empty()
     event.preventDefault()
   }
 
@@ -16,10 +18,10 @@ var usersController = (function() {
     $('#query')[0].reset()
     return repoArr = reposAdapter(user)
   }
-  
+
   return {
-    getOwner, 
-    getRepos, 
+    getOwner,
+    getRepos,
     setup
   }
 

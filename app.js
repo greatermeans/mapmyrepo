@@ -23,8 +23,7 @@ function gatherContributors(event,self) {
 	repo = (store.repos.filter(function (r) {
 		return (parseInt(self.id)) === r.id
 	}))[0]
-  $('#repo-title').empty()
-  $('#map-title').prepend(`<h1 id="repo-title"> ${repo.name} </h1>`)
+  $('#repo-title').html(`${repo.name}`)
 	contributors = contributorsAdapter(repo)
 	setTimeout(convertContributors, 150)
 	setTimeout(mapLocations, 1000)
