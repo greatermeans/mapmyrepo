@@ -14,15 +14,21 @@ var mapsController = (function () {
 				 url: 'https://cdn0.iconfinder.com/data/icons/social-media-logos-pins-free/32/social_media_logo_github-64.png'
 			 };
 
-		new google.maps.Marker({
-
+		var marker = new google.maps.Marker({
 					position: mark.position,
           map: store.map,
+					// url: mark.user.url
+					icon: octoCat
+				});
 
-					icon: octoCat,
+				marker.addListener('click', function(){
+					window.location.href = mark.user.url
+				})
+
+			}
 					// title: mark.title
-        });
-	}
+
+
 
 	function setAllMarkers() {
 		store.marks.forEach(setMarker)

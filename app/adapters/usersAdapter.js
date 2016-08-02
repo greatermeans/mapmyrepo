@@ -5,6 +5,6 @@ function usersAdapter(user){
       type: 'get'
     })
     .done(function (response) {
-      new User(response.login, response.location)
+      new User(response.login, response.location, response.html_url)
     })
 }
