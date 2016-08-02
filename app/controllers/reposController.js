@@ -15,6 +15,11 @@ var reposController = (function () {
     $('#repositories3').html(repoList3)
     $('#map').empty()
     $('#map')[0].style.cssText = ""
+    if (store.repos.length > 0) {
+      $('#repo-label').html('Repositories')
+    } else {
+      $('#repo-label').html('Sorry, that user does not exist')
+    }
   }
 
   return {

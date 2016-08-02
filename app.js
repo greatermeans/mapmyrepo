@@ -6,7 +6,7 @@ const store = {
 }
 
 function initiate(event) {
-  $('#repo-label').html('Repositories')
+  $('#repo-label').html(' ')
   usersController.setup(event)
   usersController.getOwner()
   usersController.getRepos()
