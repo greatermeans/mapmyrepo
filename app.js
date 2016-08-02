@@ -1,7 +1,7 @@
 const store = {
   users: [],
   repos: [],
-  maps: [],
+  map: "",
   marks: []
 }
 
@@ -30,7 +30,7 @@ function gatherContributors(event,self) {
 
 function convertContributors () {
 	contributors.responseJSON.forEach(function(contributor) {
-		usersAdapter(contributor.login)		
+		usersAdapter(contributor.login)
 	})
 }
 

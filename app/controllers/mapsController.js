@@ -12,20 +12,22 @@ var mapsController = (function () {
 	}
 
 	function show() {
-      theMap = new google.maps.Map(($('#map')[0]), {
-            center: {lat: 44.540, lng: -78.546},
-            zoom: 4
-        });
+			mapsAdapter()
+
+			// theMap = new google.maps.Map(($('#map')[0]), {
+      //       center: {lat: 44.540, lng: -78.546},
+      //       zoom: 4
+      //   });
 	}
 
 	function setMarker(mark) {
 		var octoCat = {
 				 path: 'https://developers.google.com/site-assets/logo-github.svg',
 			 };
-			 
+
 		new google.maps.Marker({
-          position: mark.position,
-          map: theMap,
+					position: mark.position,
+          map: store.map,
 					// icon: octoCat
           // title: this.title
         });
