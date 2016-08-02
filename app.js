@@ -39,7 +39,7 @@ function mapLocations() {
 	mapsController.create()
 	mapsController.show()
 	store.users.forEach(function(user) {
-			geocoderAdapter(user.location)
+			geocoderAdapter(user)
 	})
 	setTimeout(mapsController.setAllMarkers, 2000)
 }

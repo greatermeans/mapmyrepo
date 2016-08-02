@@ -10,16 +10,19 @@ var mapsController = (function () {
 	}
 
 	function setMarker(mark) {
-		var octoCat = {
-				 url: 'https://cdn0.iconfinder.com/data/icons/social-media-logos-pins-free/32/social_media_logo_github-64.png'
-			 };
+		let image = {
+    		url: mark.avatar,
+    // This marker is 20 pixels wide by 32 pixels high.
+    		size: new google.maps.Size(50, 50),
+    	// The origin for this image is (0, 0).
+
+    // The anchor for this image is the base of the flagpole at (0, 32).
+  		};
 
 		new google.maps.Marker({
-
-					position: mark.position,
-          map: store.map,
-
-					icon: octoCat,
+			position: mark.position,
+          	map: store.map,
+			icon: image
 					// title: mark.title
         });
 	}
