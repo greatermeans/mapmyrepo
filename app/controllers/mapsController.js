@@ -3,38 +3,49 @@ var mapsController = (function () {
 
 	function create() {
 
-		var markerArr = [{"lat" : 34.0522342, "lng" : -80.2436849},{"lat" : 80.0522342, "lng" : -118.2436849}]
-		var MapProperties = new Mapped ({"lat" : 34.0522342, "lng" : -118.2436849},8, markerArr)
+		// var markerArr = [{"lat" : 34.0522342, "lng" : -80.2436849},{"lat" : 80.0522342, "lng" : -118.2436849}]
+		var MapProperties = new Mapped ({"lat" : 34.0522342, "lng" : -118.2436849}, 4)
 		// markerArr.forEach(createMarker) THIS IS NOW in the GEOCODER ADAPTER
-		show()
-		theMap.markers.forEach(setMarker)
+
+		// show()
+		// theMap.markers.forEach(setMarker)
 	}
 
 	function show() {
-        new google.maps.Map(($('#map')[0]), {
-            center: theMap.center,
-            zoom: theMap.zoom
+      theMap = new google.maps.Map(($('#map')[0]), {
+            center: {lat: 44.540, lng: -78.546},
+            zoom: 4
         });
 	}
 
-	function setMarker() {
-		debugger
+	function setMarker(mark) {
+		var octoCat = {
+				 path: 'https://developers.google.com/site-assets/logo-github.svg',
+			 };
+			 
 		new google.maps.Marker({
-          position: this.position,
+          position: mark.position,
           map: theMap,
+					// icon: octoCat
           // title: this.title
         });
 	}
 
-	function createMarker() {
-		debugger
-		var mark = new Mark (arguments[0])
-		store.markers.push(mark)
+	function setAllMarkers() {
+		store.marks.forEach(setMarker)
 	}
+
+	// function createMarker() {
+	// 	debugger
+	// 	var mark = new Mark (arguments[0])
+	// 	store.markers.push(mark)
+	// }
 
 	return {
 		create,
-		show
+		show,
+		setMarker,
+		setAllMarkers
 	}
 
 

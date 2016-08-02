@@ -10,7 +10,6 @@ const Repo = (function(){
       this.contributors = []
       this.id = ++counter
       store.repos.push(this)
-      // contributorsAdapter(contributors_url)
     }
 
 

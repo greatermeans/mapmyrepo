@@ -13,29 +13,32 @@ function initiate(event) {
 
 var contributors
 var repo
+var user
 
 function gatherContributors(event,self) {
 	event.preventDefault()
+	store.users = []
+	store.marks = []
 	repo = (store.repos.filter(function (r) {
 		return (parseInt(self.id)) === r.id
 	}))[0]
 
 	contributors = contributorsAdapter(repo)
 	setTimeout(convertContributors, 150)
-	setTimeout(mapLocations, 200)
+	setTimeout(mapLocations, 1000)
 }
 
 function convertContributors () {
 	contributors.responseJSON.forEach(function(contributor) {
-		repo.contributors.push(usersAdapter(contributor.login))
+		usersAdapter(contributor.login)		
 	})
 }
 
 function mapLocations() {
 	mapsController.create()
 	mapsController.show()
-	repo.contributors.forEach(function(contributor) {
-		geocoderAdapter(contributor.location)
+	store.users.forEach(function(user) {
+			geocoderAdapter(user.location)
 	})
-	setTimeout(mapsController.setAllMarkers, 200)
+	setTimeout(mapsController.setAllMarkers, 2000)
 }
