@@ -5,7 +5,6 @@ function mapsAdapter(){
     crossDomain: true,
     dataType: 'jsonp'
   }).done(function(){
-    debugger
     var makemap = (function initMap() {
       var mapDiv = document.getElementById('map');
       var map = new google.maps.Map(mapDiv, {

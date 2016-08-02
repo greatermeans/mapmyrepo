@@ -1,0 +1,53 @@
+
+.flexbox-container {
+   display: -ms-flex;
+   display: -webkit-flex;
+   display: flex;
+}
+
+.flexbox-container > div {
+  width: 50%;
+  padding: 10px;
+}
+
+.flexbox-container > div:first-child {
+  margin-right: 20px;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+body {
+  background-image: url("../images/dimension.png");
+}
+
+.container .jumbotron {
+  padding-top: 0px;
+  padding-right: 0px;
+  margin-bottom: 0px;
+}
+
+.jumbotron h1.small {
+  text-align: center;
+}
+
+.jumbotron p.big {
+  text-align: center;
+}
+
+.centered-image {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner .img {
+  -webkit-filter: grayscale(75%);
+  filter: grayscale(75%);
+}
+
+.well-lg {
+  background: #e43c5c;
+}
