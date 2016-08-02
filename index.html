@@ -2,49 +2,57 @@
 <html>
   <head>
     <title>Map My Repo</title>
-    <style>
-       .flexbox-container {
-         display: -ms-flex;
-         display: -webkit-flex;
-         display: flex;
-       }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:600,300|Josefin+Slab:400,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/mystyle.css">
+  </head>
 
-      .flexbox-container > div {
-        width: 50%;
-        padding: 10px;
-      }
+  <body>
+    <div id="banner" class="section-padding">
+  		<div class="container">
+  			<div class="row">
+  				<div class="jumbotron">
+  				  <h1 class="small">Map My <span class="bold">Repo</span></h1>
+  				  <p class="big">Find out where your contributors are from.</p>
+            <br/>
+            <a href="https://github.com/">
+              <img class="centered-image" src="assets/images/GitHub-Mark-64px.png">
+            </a>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+              <form id="query" onsubmit="initiate(event)">
+                <input class="text-field-box" type="text" placeholder="Enter Git Username" id="username" name="username">
+                <button class="button-small" type="submit">Search</button>
+                <!-- <input type="submit" value="Search"> -->
+              </form>
+            </div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
 
-      .flexbox-container > div:first-child {
-        margin-right: 20px;
-      }
-
-      #map {
-        width: 80%;
-        height: 400px;
-      }
-    </style>
-    </head>
-    <body>
-    <main id="main">
-    <br>
-    <br>
-    <form id="query" onsubmit="initiate(event)">
-      <label for="search"> Search Username: <input type="text" id="username" name="username" placeholder="Git Username goes here"></label>
-      <input type="submit" value="Search">
-    </form>
-    </main>
-
-    <div class="flexbox-container">
-      <div>
-        <h3>Repositories</h3>
-        <div id="repositories"></div>
-      </div>
-      <br>
-      <div>
-        <h3>Map</h3>
-        <div id="map"></div>
+    <div class="container">
+      <div class="row text-center white">
+        <div class="col-md-4">
+          <div class="well-lg">
+            <p>Repositories</p>
+          </div>
+          <div id="repositories"></div>
+        </div>
+        <div class="col-md-8">
+          <h2>Map</h2>
+          <div id="map"></div>
+        </div>
       </div>
     </div>
+
     <script src="jquery-1.11.3.js"></script>
     <script src="lib/handlebars.js"></script>
     <script src="app/models/repo.js"> </script>
@@ -60,27 +68,15 @@
     <script src="app/controllers/reposController.js"> </script>
     <script src="app/controllers/mapsController.js"> </script>
     <script src="app.js"></script>
-    <script src="index.js"></script>
-    <!-- <script
+    <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi1C-M1xTJE97lk16r_qyINyd1jPii9W4">
-    </script> -->
-
-    <script src="app/controllers/mapsController.js"></script>
-    <script id="repositories-template" type="text/x-handlebars-template">
-    </div>
-    {{#each this}}
-      <div class="row">
-        <a href="#" id={{id}} onclick="gatherContributors(event,this)">{{name}}</a>
-      </div>
-    {{/each}}
-    </div>
     </script>
 
-
-
-     <!-- <script
-        src="https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCi1C-M1xTJE97lk16r_qyINyd1jPii9W4" >
-    </script> -->
+    <script id="repositories-template" type="text/x-handlebars-template">
+    {{#each this}}
+        <a href="#" id={{id}} onclick="gatherContributors(event,this)">{{name}}</a><br/>
+    {{/each}}
+    </script>
 
   </body>
 </html>
