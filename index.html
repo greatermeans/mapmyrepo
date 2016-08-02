@@ -35,8 +35,8 @@
   	</div>
 
     <div class="container">
-
       <div class="row">
+        <h1 id="repo-label"></h1>
         <div class="col-md-4">
             <div id="repositories1"></div>
         </div>
@@ -59,6 +59,9 @@
       </div>
     </div>
 
+    <br/>
+    <br/>
+
     <script src="jquery-1.11.3.js"></script>
     <script src="lib/handlebars.js"></script>
     <script src="app/models/repo.js"> </script>
@@ -75,12 +78,9 @@
     <script src="app/controllers/mapsController.js"> </script>
     <script src="app.js"></script>
     <script id="repositories-template" type="text/x-handlebars-template">
-      <div class="well-lg">
-        <p>Repositories</p>
         {{#each this}}
             <a href="#" id={{id}} onclick="gatherContributors(event,this)">{{name}}</a><br/>
         {{/each}}
-      </div>
     </script>
 
     <!-- link to attribution https://creativecommons.org/licenses/by/3.0/
