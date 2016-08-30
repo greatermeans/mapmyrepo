@@ -11,8 +11,8 @@ MMR uses Ajax to access GitHub's API to get repo and user data and the Google Ma
 
 #Contributors
 
-[David Tsai] (https://github.com/davidtsai130) | 
+[David Tsai] (https://github.com/davidtsai130) | david.tsai@flatironschool.com
 
-[Daniel Berry] (https://github.com/berrydanielt) |
+[Daniel Berry] (https://github.com/berrydanielt) | dandanberry@gmail.com
 
-[George Akouri] (https://github.com/greatermeans) |
+[George Akouri] (https://github.com/greatermeans) | george.akouri@flatironschool.com
