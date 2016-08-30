@@ -9,6 +9,8 @@ The user can click on a marker at a location to see the username and avatar of t
 
 MMR uses Ajax to access GitHub's API to get repo and user data and the Google Map and Geocoding APIs to create the map
 
+![User Interface](http://recordit.co/BDaOydt0wa)
+
 #Contributors
 
 [David Tsai] (https://github.com/davidtsai130) | david.tsai@flatironschool.com
