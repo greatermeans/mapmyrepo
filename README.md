@@ -13,6 +13,6 @@ MMR uses Ajax to access GitHub's API to get repo and user data and the Google Ma
 
 [David Tsai] (https://github.com/davidtsai130) | 
 
-Daniel Berry |
+[Daniel Berry] (https://github.com/berrydanielt) |
 
-George Akouri |
+[George Akouri] (https://github.com/greatermeans) |
