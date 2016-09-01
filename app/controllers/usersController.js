@@ -4,7 +4,7 @@ var usersController = (function() {
     store.repos = []
     store.users = []
     $('#repo-title').empty()
-    $('.gm-style').empty()
+
     event.preventDefault()
   }
 
