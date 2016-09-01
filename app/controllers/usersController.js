@@ -4,13 +4,12 @@ var usersController = (function() {
     store.repos = []
     store.users = []
     $('#repo-title').empty()
-
     event.preventDefault()
   }
 
   function getOwner() {
     let user = $('#username').val()
-    usersAdapter(user)
+    usersAdapter(user) // WHY DO WE WANT THIS HERE? DO we need to make an API call to the owner apart from getting his repos?
   }
 
   function getRepos() {
