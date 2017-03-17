@@ -17,8 +17,8 @@ Simply clone this repo and open the Index.html file in your browser.
 
 #Contributors
 
-[David Tsai] (https://github.com/davidtsai130) | david.tsai@flatironschool.com
+[David Tsai](https://github.com/davidtsai130) | david.tsai@flatironschool.com
 
-[Daniel Berry] (https://github.com/berrydanielt) | dandanberry@gmail.com
+[Daniel Berry](https://github.com/berrydanielt) | dandanberry@gmail.com
 
-[George Akouri] (https://github.com/greatermeans) | george.akouri@flatironschool.com
+[George Akouri](https://github.com/greatermeans) | george.akouri@flatironschool.com
