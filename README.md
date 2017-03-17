@@ -7,7 +7,7 @@ MMR is a browser-based single page JavaScript application that lets a user
   2) select a repo from the index to see all of its contributors displayed on a global Google Map; each user's location (if they have one) is pulled from their GitHub user profile.
 The user can click on a marker at a location to see the username and avatar of the user from that location, and then redirect to their GitHub profile. 
 
-MMR accesses GitHub's API through AJAX calls to acquire repo and user data. It is also uses the Google Map and Geocoding APIs to create the map and plot contributor locations.
+MMR accesses GitHub's API through AJAX calls to acquire repo and user data. It uses the Google Map and Geocoding APIs to create the map and plot contributor locations.
 
 ## Try It Out Yourself
 
